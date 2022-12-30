@@ -1,5 +1,3 @@
-/** @format */
-
 import { ImageList } from '@mui/material';
 import React from 'react';
 import ProgressItem from './ProgressItem';

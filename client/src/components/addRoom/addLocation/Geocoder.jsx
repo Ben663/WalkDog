@@ -1,7 +1,7 @@
 import MapBoxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { useControl } from 'react-map-gl';
 import { useValue } from '../../../context/ContextProvider';
-import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 
 const Geocoder = () => {
 	const { dispatch } = useValue();

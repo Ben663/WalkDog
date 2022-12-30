@@ -5,9 +5,10 @@ import ReactMapGL, {
 	NavigationControl,
 } from 'react-map-gl';
 import { useValue } from '../../../context/ContextProvider';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { useEffect, useRef } from 'react';
+
+import 'mapbox-gl/dist/mapbox-gl.css'
 import Geocoder from './Geocoder';
+import { useEffect, useRef } from 'react';
 
 const AddLocation = () => {
 	const {
@@ -49,7 +50,7 @@ const AddLocation = () => {
 					latitude: lat,
 					zoom: 8,
 				}}
-				mapStyle='mapbox://styles/mapbox/streets-v11'>
+				mapStyle='mapbox://styles/benny66360/clcb0s72v000a15phxxqy1hjg'>
 				<Marker
 					latitude={lat}
 					longitude={lng}
