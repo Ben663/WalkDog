@@ -7,12 +7,12 @@ import { getStorage } from 'firebase/storage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: 'AIzaSyDUe2FQnusS92kXe0nyTZDPkf2HR50QxVg',
-	authDomain: 'travel-3eb3d.firebaseapp.com',
-	projectId: 'travel-3eb3d',
-	storageBucket: 'travel-3eb3d.appspot.com',
-	messagingSenderId: '452492883871',
-	appId: '1:452492883871:web:04df6128c95fb5909bafaa',
+	apiKey: 'AIzaSyAdQvb_FuK_YdGviG5EU-B_RlZjnB_PddA',
+	authDomain: 'walk-dog-373012.firebaseapp.com',
+	projectId: 'walk-dog-373012',
+	storageBucket: 'walk-dog-373012.appspot.com',
+	messagingSenderId: '650921243490',
+	appId: '1:650921243490:web:1718b880114c13cf38f23b',
 };
 
 // Initialize Firebase

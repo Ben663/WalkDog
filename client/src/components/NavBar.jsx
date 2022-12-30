@@ -20,43 +20,49 @@ const NavBar = () => {
 	} = useValue();
 
 	return (
-		<AppBar>
-			<Container maxWidth='lg'>
-				<Toolbar disableGutters>
-					<Box sx={{ mr: 1 }}>
-						<IconButton
-							size='large'
-							color='inherit'>
-							<Menu />
-						</IconButton>
-					</Box>
-					<Typography
-						variant='h6'
-						component='h1'
-						noWrap
-						sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-						Nice To See You
-					</Typography>
-					<Typography
-						variant='h6'
-						component='h1'
-						noWrap
-						sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-						Welcome
-					</Typography>
-					{!currentUser ? (
-						<Button
-							color='inherit'
-							startIcon={<Lock />}
-							onClick={() => dispatch({ type: 'OPEN_LOGIN' })}>
-							Account Login
-						</Button>
-					) : (
-						<UserIcons />
-					)}
-				</Toolbar>
-			</Container>
-		</AppBar>
+		<>
+			<AppBar>
+				<Container maxWidth='lg'>
+					<Toolbar disableGutters>
+						<Box sx={{ mr: 1 }}>
+							<IconButton
+								size='large'
+								color='inherit'>
+								<Menu />
+							</IconButton>
+						</Box>
+						<Typography
+							variant='h6'
+							component='h1'
+							noWrap
+							sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+							Nice To See You
+						</Typography>
+						<Typography
+							variant='h6'
+							component='h1'
+							noWrap
+							sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+							Hello
+						</Typography>
+						{!currentUser ? (
+							<Button
+								color='inherit'
+								startIcon={<Lock />}
+								onClick={() => dispatch({ type: 'OPEN_LOGIN' })}>
+								Account Login
+							</Button>
+						) : (
+							<UserIcons />
+						)}
+					</Toolbar>
+				</Container>
+			</AppBar>
+			<Toolbar />
+		</>
 	);
 };
+
 export default NavBar;
+
+

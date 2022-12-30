@@ -1,7 +1,9 @@
 import express from "express";
 import './db/mongoose.connect.js'
+import cors from 'cors'
 import roomRouter from "./routes/roomRouter.js";
 import userRouter from './routes/userRouter.js'
+
 const port = process.env.PORT || 5000 
 
 const app = express();
@@ -13,10 +15,11 @@ app.use((req, res, next) => {
     next();
 });
 app.use(express.json({ limit: '10mb' }));
+app.use(cors());
 app.use('/user', userRouter);
 app.use('/room', roomRouter);
 
-app.use('/', (req, res) => res.json({ message: 'Welcome To Our API' }));
+app.get('/', (req, res) => res.json({ message: 'Welcome To Our API' }));
 app.use((req, res) => res.status(404).json({ success: false, message: 'Not Found' }));
 
 const startServer = async () => {

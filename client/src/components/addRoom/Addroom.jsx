@@ -1,4 +1,4 @@
-import { Cancel, Send } from '@mui/icons-material';
+import { Send } from '@mui/icons-material';
 import {
 	Box,
 	Button,
@@ -13,20 +13,11 @@ import { useValue } from '../../context/ContextProvider';
 import AddDetails from './addDetails/AddDetails';
 import AddImages from './addImages/AddImages';
 import AddLocation from './addLocation/AddLocation';
-import { clearRoom, createRoom, updateRoom } from '../../actions/room';
-import { useNavigate } from 'react-router-dom';
+import { createRoom } from '../../actions/room';
 
-const AddRoom = () => {
+const AddRoom = ({ setPage }) => {
 	const {
-		state: {
-			images,
-			details,
-			location,
-			currentUser,
-			updatedRoom,
-			deletedImages,
-			addedImages,
-		},
+		state: { images, details, location, currentUser },
 		dispatch,
 	} = useValue();
 	const [activeStep, setActiveStep] = useState(0);
@@ -98,26 +89,7 @@ const AddRoom = () => {
 			description: details.description,
 			images,
 		};
-		if (updatedRoom)
-			return updateRoom(
-				room,
-				currentUser,
-				dispatch,
-				updatedRoom,
-				deletedImages
-			);
-		createRoom(room, currentUser, dispatch);
-	};
-
-	const navigate = useNavigate();
-	const handleCancel = () => {
-		if (updatedRoom) {
-			navigate('/dashboard/rooms');
-			clearRoom(dispatch, currentUser, addedImages, updatedRoom);
-		} else {
-			dispatch({ type: 'UPDATE_SECTION', payload: 0 });
-			clearRoom(dispatch, currentUser, images);
-		}
+		createRoom(room, currentUser, dispatch, setPage);
 	};
 	return (
 		<Container sx={{ my: 4 }}>
@@ -152,33 +124,24 @@ const AddRoom = () => {
 						color='inherit'
 						disabled={!activeStep}
 						onClick={() => setActiveStep((activeStep) => activeStep - 1)}>
-						Back
+						Go Back
 					</Button>
 					<Button
 						disabled={checkDisabled()}
 						onClick={handleNext}>
-						Next
+						Go Next
 					</Button>
 				</Stack>
-
-				<Stack
-					sx={{ alignItems: 'center', justifyContent: 'center', gap: 2 }}
-					direction='row'>
-					{showSubmit && (
+				{showSubmit && (
+					<Stack sx={{ alignItems: 'center' }}>
 						<Button
 							variant='contained'
 							endIcon={<Send />}
 							onClick={handleSubmit}>
-							{updatedRoom ? 'Update' : 'Submit'}
+							Click To Submit
 						</Button>
-					)}
-					<Button
-						variant='outlined'
-						endIcon={<Cancel />}
-						onClick={handleCancel}>
-						Cancel
-					</Button>
-				</Stack>
+					</Stack>
+				)}
 			</Box>
 		</Container>
 	);
