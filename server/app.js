@@ -1,10 +1,7 @@
 import express from "express";
-import dotenv from 'dotenv'
+import './db/mongoose.connect.js'
 import roomRouter from "./routes/roomRouter.js";
-
-
-dotenv.config();
-
+import userRouter from './routes/userRouter.js'
 const port = process.env.PORT || 5000 
 
 const app = express();
@@ -16,7 +13,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use(express.json({ limit: '10mb' }));
-
+app.use('/user', userRouter);
 app.use('/room', roomRouter);
 
 app.use('/', (req, res) => res.json({ message: 'Welcome To Our API' }));

@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv'
 
 dotenv.config();
 
-const URL = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@walkdog.3zgw6et.mongodb.net/${process.env.MONGO_CONNECT}?retryWrites=true&w=majority`;
+const URL = process.env.MONGO_URL;
 mongoose.set('strictQuery', false)
 try {
     mongoose.connect(
@@ -13,5 +13,4 @@ try {
 		);
 } catch (error) {
     console.log('Houston We Have A Problem');
-    
 }
