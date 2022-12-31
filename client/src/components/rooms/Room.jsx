@@ -23,7 +23,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/lazy';
 import 'swiper/css/zoom';
-import './swiper.css';
+import './Swiper.css'
 
 const Transition = forwardRef((props, ref) => {
 	return (
@@ -99,7 +99,7 @@ const Room = () => {
 							<div className='swiper-zoom-container'>
 								<img
 									src={url}
-									alt='room'
+									alt=''
 								/>
 							</div>
 						</SwiperSlide>

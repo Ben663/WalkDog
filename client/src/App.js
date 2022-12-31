@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Notification from './components/Notification';
 import Login from './components/user/Login';
 import BoottomNav from './components/BottomNav';
+import Room from './components/rooms/Room'
 
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
 			<Notification />
 			<Login />
 			<NavBar />
-			<BoottomNav/>
+			<BoottomNav />
+			<Room/>
 		</>
 	);
 };

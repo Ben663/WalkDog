@@ -15,7 +15,7 @@ export const createRoom = async (room, currentUser, dispatch, setPage) => {
 			payload: {
 				open: true,
 				severity: 'success',
-				message: 'The room has been added successfully',
+				message: 'The homeis has been added successfully',
 			},
 		});
 		dispatch({ type: 'RESET_ROOM' });
@@ -23,4 +23,10 @@ export const createRoom = async (room, currentUser, dispatch, setPage) => {
 	}
 
 	dispatch({ type: 'END_LOADING' });
+};
+export const getRooms = async (dispatch) => {
+	const result = await fetchData({ url, method: 'GET' }, dispatch);
+	if (result) {
+		dispatch({ type: 'UPDATE_ROOMS', payload: result });
+	}
 };

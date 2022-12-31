@@ -46,12 +46,12 @@ const AddDetails = () => {
 					<FormControlLabel
 						value={0}
 						control={<Radio />}
-						label='Free Stay'
+						label='Free Walk'
 					/>
 					<FormControlLabel
 						value={1}
 						control={<Radio />}
-						label='Nominal Fee'
+						label='Pay Walk'
 					/>
 					{Boolean(costType) && (
 						<TextField

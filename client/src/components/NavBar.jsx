@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	AppBar,
 	Box,
@@ -12,12 +12,15 @@ import { Lock, Menu } from '@mui/icons-material';
 
 import { useValue } from '../context/ContextProvider';
 import UserIcons from './user/UserIcons';
+import Sidebar from './sidebar/sidebar';
 
 const NavBar = () => {
 	const {
 		state: { currentUser },
 		dispatch,
 	} = useValue();
+
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<>
@@ -27,7 +30,8 @@ const NavBar = () => {
 						<Box sx={{ mr: 1 }}>
 							<IconButton
 								size='large'
-								color='inherit'>
+								color='inherit'
+								onClick={() => setIsOpen(true)}>
 								<Menu />
 							</IconButton>
 						</Box>
@@ -36,7 +40,7 @@ const NavBar = () => {
 							component='h1'
 							noWrap
 							sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-							Nice To See You
+							Hello Nice To See You
 						</Typography>
 						<Typography
 							variant='h6'
@@ -59,10 +63,9 @@ const NavBar = () => {
 				</Container>
 			</AppBar>
 			<Toolbar />
+			<Sidebar {...{ isOpen, setIsOpen }} />
 		</>
 	);
 };
 
 export default NavBar;
-
-
