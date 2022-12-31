@@ -23,7 +23,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/lazy';
 import 'swiper/css/zoom';
-import './Swiper.css'
+import './swiper.css';
 
 const Transition = forwardRef((props, ref) => {
 	return (
@@ -99,7 +99,7 @@ const Room = () => {
 							<div className='swiper-zoom-container'>
 								<img
 									src={url}
-									alt=''
+									alt='homeis'
 								/>
 							</div>
 						</SwiperSlide>
@@ -128,10 +128,10 @@ const Room = () => {
 							<Typography
 								variant='h6'
 								component='span'>
-								{'Price Per Night: '}
+								{'Price Per Walk: '}
 							</Typography>
 							<Typography component='span'>
-								{room?.price === 0 ? 'Free Stay' : '$' + room?.price}
+								{room?.price === 0 ? 'Free Walk' : '$' + room?.price}
 							</Typography>
 						</Box>
 						<Box

@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 import tryCatch from './utils/tryCatch.js';
-import Room from '../models/Room.js'
+import Room from '../models/Room.js';
 
 export const register = tryCatch(async (req, res) => {
 	const { name, email, password } = req.body;
@@ -70,4 +70,9 @@ export const updateProfile = tryCatch(async (req, res) => {
 		expiresIn: '1h',
 	});
 	res.status(200).json({ success: true, result: { name, photoURL, token } });
+});
+
+export const getUsers = tryCatch(async (req, res) => {
+	const users = await User.find().sort({ _id: -1 });
+	res.status(200).json({ success: true, result: users });
 });
