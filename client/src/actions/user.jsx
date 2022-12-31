@@ -1,3 +1,5 @@
+/** @format */
+
 import fetchData from './utils/fetchData';
 import { v4 as uuidv4 } from 'uuid';
 import uploadFile from '../firebase/uploadFile';

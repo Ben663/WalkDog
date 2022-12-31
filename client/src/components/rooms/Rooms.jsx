@@ -14,6 +14,7 @@ import { StarBorder } from '@mui/icons-material';
 const Rooms = () => {
 	const {
 		state: { filteredRooms },
+		dispatch,
 	} = useValue();
 	return (
 		<Container>
@@ -22,17 +23,19 @@ const Rooms = () => {
 				sx={{
 					mb: 8,
 					gridTemplateColumns:
-						'repeat(auto-fill, minmax(260px, 1fr))!important',
+						'repeat(auto-fill, minmax(280px, 1fr))!important',
 				}}>
 				{filteredRooms.map((room) => (
-					<Card key={room._id}>
+					<Card
+						key={room._id}
+						sx={{ maxHeight: 350 }}>
 						<ImageListItem sx={{ height: '100% !important' }}>
 							<ImageListItemBar
 								sx={{
 									background:
 										'linear-gradient(to bottom, rgba(0,0,0,0.7)0%, rgba(0,0,0,0.3)70%, rgba(0,0,0,0)100%)',
 								}}
-								title={room.price === 0 ? 'Free Walk' : '$' + room.price}
+								title={room.price === 0 ? 'Free Stay' : '$' + room.price}
 								actionIcon={
 									<Tooltip
 										title={room.uName}
@@ -47,6 +50,7 @@ const Rooms = () => {
 								alt={room.title}
 								loading='lazy'
 								style={{ cursor: 'pointer' }}
+								onClick={() => dispatch({ type: 'UPDATE_ROOM', payload: room })}
 							/>
 							<ImageListItemBar
 								title={room.title}
