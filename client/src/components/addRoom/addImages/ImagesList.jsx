@@ -9,15 +9,16 @@ import React from 'react';
 import { useValue } from '../../../context/ContextProvider';
 import deleteFile from '../../../firebase/deleteFile';
 
-
 const ImagesList = () => {
 	const {
-		state: { images, currentUser },
+		state: { images, currentUser, updatedRoom },
 		dispatch,
 	} = useValue();
 
 	const handleDelete = async (image) => {
 		dispatch({ type: 'DELETE_IMAGE', payload: image });
+		if (updatedRoom)
+			return dispatch({ type: 'UPDATE_DELETED_IMAGES', payload: [image] });
 		const imageName = image?.split(`${currentUser?.id}%2F`)[1]?.split('?')[0];
 		try {
 			await deleteFile(`rooms/${currentUser?.id}/${imageName}`);
