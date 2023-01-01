@@ -3,12 +3,12 @@ import './db/mongoose.connect.js'
 import cors from 'cors'
 import roomRouter from "./routes/roomRouter.js";
 import userRouter from './routes/userRouter.js'
-import * as url from 'url'
-import path from 'path'
-const __dirname = url.fileURLToPath(new URL('./', import.meta.url));
+// import * as url from 'url'
+// import path from 'path'
+// const __dirname = url.fileURLToPath(new URL('./', import.meta.url));
 
 
-
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use((_, res, next) => {
@@ -19,18 +19,24 @@ app.use((_, res, next) => {
 });
 app.use(express.json({ limit: '10mb' }));
 app.use(cors());
-const publicPath = path.join(__dirname, 'build');
-app.use(express.static(publicPath));
+// const publicPath = path.join(__dirname, 'build');
+// app.use(express.static(publicPath));
 app.use('/user', userRouter);
 app.use('/room', roomRouter);
 
-app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, 'build', index.html));
-});
+// app.get('*', (req, res) => {
+// 	res.sendFile(path.resolve(__dirname, 'build', index.html));
+// });
 app.get('/', (_, res) => res.json({ message: 'Welcome To Our API' }));
 app.use((_, res) => res.status(404).json({ success: false, message: 'Not Found' }));
 
-
-
-
-export { app };
+const startServer = async () => {
+	try {
+		app.listen(port, () => {
+			console.log(`Server Is Listening On Port: ${port}`);
+		});
+	} catch (error) {
+		console.log(error);
+	}
+};
+startServer();

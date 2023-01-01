@@ -28,7 +28,7 @@ import { storeRoom } from '../../actions/room';
 import { logout } from '../../actions/user';
 import { useValue } from '../../context/ContextProvider';
 import Main from './main/Main';
-import Messages from './messages/Messages';
+import Messages from './messages/Message'
 import Requests from './requests/Requests';
 import Rooms from './rooms/Rooms';
 import Users from './users/Users';
@@ -144,7 +144,7 @@ const SideList = ({ open, setOpen }) => {
 			updatedRoom,
 			deletedImages,
 			addedImages,
-			currentUser.id
+			currentUser?.id
 		);
 		logout(dispatch);
 		navigate('/');
