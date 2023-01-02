@@ -33,6 +33,7 @@ const useCheckToken = () => {
 				logout(dispatch);
 			}
 		}
+		// eslint-disable-next-line
 	}, []);
 };
 

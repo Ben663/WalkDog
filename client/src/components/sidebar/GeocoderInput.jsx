@@ -25,6 +25,7 @@ const GeocoderInput = () => {
 		});
 
 		ctrl.on('clear', () => dispatch({ type: 'CLEAR_ADDRESS' }));
+		// eslint-disable-next-line
 	}, []);
 	return null;
 };

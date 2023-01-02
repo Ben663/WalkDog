@@ -35,6 +35,7 @@ const AddLocation = () => {
 					});
 				});
 		}
+		// eslint-disable-next-line
 	}, []);
 
 	useEffect(() => {
