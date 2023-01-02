@@ -1,0 +1,11 @@
+.landing{
+    min-height: 100%;
+    width: 30%;
+    background: url('../../../../public/landPage/zou.jpg') center bottom/cover no-repeat;
+
+
+}
+.link{
+    display: flex;
+    justify-content: center;
+}

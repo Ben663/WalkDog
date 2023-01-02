@@ -94,7 +94,7 @@ export const updateProfile = async (currentUser, updatedFields, dispatch) => {
 
 export const getUsers = async (dispatch, currentUser) => {
 	const result = await fetchData(
-		{ url, method: 'GET', token: currentUser?.token },
+		{ url, method: 'GET', token: currentUser.token },
 		dispatch
 	);
 	if (result) {

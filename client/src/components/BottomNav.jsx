@@ -4,7 +4,13 @@ import {
 	Box,
 	Paper,
 } from '@mui/material';
-import { AddLocationAlt, Bed, LocationOn } from '@mui/icons-material';
+import {
+	AddLocationAlt,
+	SettingsAccessibility,
+	Map,
+} from '@mui/icons-material';
+//import MapIcon from '@mui/icons-material/Map';
+//import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility';
 import { useEffect, useRef} from 'react';
 import ClusterMap from './map/ClusterMap';
 import Rooms from './rooms/Rooms';
@@ -45,14 +51,14 @@ const BottomNav = () => {
 					}>
 					<BottomNavigationAction
 						label='Map'
-						icon={<LocationOn />}
+						icon={<Map />}
 					/>
 					<BottomNavigationAction
-						label='Rooms'
-						icon={<Bed />}
+						label='All services'
+						icon={<SettingsAccessibility />}
 					/>
 					<BottomNavigationAction
-						label='Add'
+						label='Add Details'
 						icon={<AddLocationAlt />}
 					/>
 				</BottomNavigation>

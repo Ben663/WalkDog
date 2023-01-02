@@ -1,7 +1,8 @@
 import { Box, IconButton, Tooltip } from '@mui/material';
 import { Delete, Edit, Preview } from '@mui/icons-material';
 import { useValue } from '../../../context/ContextProvider';
-import { clearRoom, deleteRoom } from '../../../actions/room';
+// import { clearRoom, deleteRoom } from '../../../actions/room';
+import {clearRoom ,deleteRoom} from '../../../actions/room'
 import { useNavigate } from 'react-router-dom';
 
 const RoomsActions = ({ params }) => {
@@ -30,7 +31,7 @@ const RoomsActions = ({ params }) => {
 	};
 	return (
 		<Box>
-			<Tooltip title='View room details'>
+			<Tooltip title='View Details'>
 				<IconButton
 					onClick={() =>
 						dispatch({ type: 'UPDATE_ROOM', payload: params.row })
@@ -43,7 +44,7 @@ const RoomsActions = ({ params }) => {
 					<Edit />
 				</IconButton>
 			</Tooltip>
-			<Tooltip title='Delete this room'>
+			<Tooltip title='Delete This '>
 				<IconButton
 					onClick={() => deleteRoom(params.row, currentUser, dispatch)}>
 					<Delete />

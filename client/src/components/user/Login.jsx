@@ -20,7 +20,7 @@ const Login = () => {
 		state: { openLogin },
 		dispatch,
 	} = useValue();
-	const [title, setTitle] = useState('login');
+	const [title, setTitle] = useState('Login');
 	const [isRegister, setIsRegister] = useState(false);
 	const nameRef = useRef();
 	const emailRef = useRef();
@@ -51,7 +51,7 @@ const Login = () => {
 	};
 
 	useEffect(() => {
-		isRegister ? setTitle('register') : setTitle('login');
+		isRegister ? setTitle('Register') : setTitle('Login');
 	}, [isRegister]);
 	return (
 		<Dialog
@@ -123,7 +123,7 @@ const Login = () => {
 					? 'Do you have an account? Sign in now '
 					: "Don't you have an account? Create one now "}
 				<Button onClick={() => setIsRegister(!isRegister)}>
-					{isRegister ? 'login' : 'register'}
+					{isRegister ? 'Login' : 'Register'}
 				</Button>
 			</DialogActions>
 			<DialogActions sx={{ justifyContent: 'center', py: '24px' }}>
