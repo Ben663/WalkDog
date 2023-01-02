@@ -18,6 +18,7 @@ const Rooms = ({ setSelectedLink, link }) => {
 	useEffect(() => {
 		setSelectedLink(link);
 		if (rooms.length === 0) getRooms(dispatch);
+		// eslint-disable-next-line
 	}, []);
 
 	const columns = useMemo(
@@ -85,7 +86,7 @@ const Rooms = ({ setSelectedLink, link }) => {
 				variant='h3'
 				component='h3'
 				sx={{ textAlign: 'center', mt: 3, mb: 3 }}>
-				Manage Rooms
+				Manage Services
 			</Typography>
 			<DataGrid
 				columns={columns}

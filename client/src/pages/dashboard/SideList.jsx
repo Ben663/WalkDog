@@ -209,7 +209,7 @@ const SideList = ({ open, setOpen }) => {
 				</Box>
 				<Box sx={{ textAlign: 'center' }}>
 					{open && <Typography>{currentUser?.name}</Typography>}
-					<Typography variant='body2'>{currentUser?.role || ' '}</Typography>
+					<Typography variant='body2'>{currentUser?.role || ''}</Typography>
 					{open && (
 						<Typography variant='body2'>{currentUser?.email}</Typography>
 					)}

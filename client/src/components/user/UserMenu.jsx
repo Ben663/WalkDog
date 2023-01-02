@@ -61,6 +61,7 @@ const UserMenu = ({ anchorUserMenu, setAnchorUserMenu }) => {
 
 		window.addEventListener('beforeunload', storeBeforeLeave);
 		return () => window.removeEventListener('beforeunload', storeBeforeLeave);
+		// eslint-disable-next-line
 	}, [location, details, images]);
 	return (
 		<>

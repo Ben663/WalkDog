@@ -27,7 +27,7 @@ const ClusterMap = () => {
 
 	useEffect(() => {
 		getRooms(dispatch);
-	}, []);
+	}, [dispatch]);
 
 	useEffect(() => {
 		const points = filteredRooms.map((room) => ({
@@ -61,6 +61,7 @@ const ClusterMap = () => {
 		if (mapRef.current) {
 			setBounds(mapRef.current.getMap().getBounds().toArray().flat());
 		}
+		// eslint-disable-next-line
 	}, [mapRef?.current]);
 	return (
 		<ReactMapGL

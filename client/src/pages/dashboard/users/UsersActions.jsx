@@ -33,7 +33,8 @@ const UsersActions = ({ params, rowId, setRowId }) => {
 
 	useEffect(() => {
 		if (rowId === params.id && success) setSuccess(false);
-	}, [params.id,rowId,success]);
+		// eslint-disable-next-line
+	}, []);
 
 	return (
 		<Box

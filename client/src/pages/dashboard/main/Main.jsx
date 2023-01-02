@@ -27,6 +27,7 @@ const Main = ({ setSelectedLink, link }) => {
 		setSelectedLink(link);
 		if (rooms.length === 0) getRooms(dispatch);
 		if (users.length === 0) getUsers(dispatch);
+		// eslint-disable-next-line
 	}, []);
 	return (
 		<Box
@@ -55,7 +56,7 @@ const Main = ({ setSelectedLink, link }) => {
 			<Paper
 				elevation={3}
 				sx={{ p: 3 }}>
-				<Typography variant='h4'>Total's</Typography>
+				<Typography variant='h4'>Total Rooms</Typography>
 				<Box
 					sx={{
 						display: 'flex',
@@ -95,7 +96,7 @@ const Main = ({ setSelectedLink, link }) => {
 				</Box>
 				<Divider sx={{ mt: 3, mb: 3, opacity: 0.7 }} />
 				<Box>
-					<Typography>Recently added </Typography>
+					<Typography>Recently added Rooms</Typography>
 					<List>
 						{rooms.slice(0, 4).map((room, i) => (
 							<Box key={room._id}>

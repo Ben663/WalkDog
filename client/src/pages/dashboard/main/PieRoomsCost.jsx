@@ -47,7 +47,7 @@ export default function PieRoomsCost() {
 			moreThan35++;
 		});
 		setCostGroups([
-			{ name: 'Free walk', qty: free },
+			{ name: 'Free Stay', qty: free },
 			{ name: 'Less Than $15', qty: lessThan15 },
 			{ name: 'Between $15 & $35', qty: between15And35 },
 			{ name: 'More Than $35', qty: moreThan35 },
