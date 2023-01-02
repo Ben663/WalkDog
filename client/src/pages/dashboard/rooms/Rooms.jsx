@@ -19,7 +19,7 @@ const Rooms = ({ setSelectedLink, link }) => {
 		setSelectedLink(link);
 		if (rooms.length === 0) getRooms(dispatch);
 		// eslint-disable-next-line
-	}, []);
+	}, [dispatch, link, rooms.length]);
 
 	const columns = useMemo(
 		() => [

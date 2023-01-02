@@ -9,8 +9,6 @@ import {
 	SettingsAccessibility,
 	Map,
 } from '@mui/icons-material';
-//import MapIcon from '@mui/icons-material/Map';
-//import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility';
 import { useEffect, useRef} from 'react';
 import ClusterMap from './map/ClusterMap';
 import Rooms from './rooms/Rooms';

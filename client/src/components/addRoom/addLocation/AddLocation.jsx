@@ -35,8 +35,8 @@ const AddLocation = () => {
 					});
 				});
 		}
-		// eslint-disable-next-line
-	}, []);
+	}, [dispatch, lat, lng, currentUser.id]);
+	// eslint-disable-next-line
 
 	useEffect(() => {
 		if ((lng || lat) && mapRef.current) {

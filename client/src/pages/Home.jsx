@@ -1,6 +1,6 @@
 import Login from '../components/user/Login';
 import NavBar from '../components/NavBar';
-// import Loading from '../components/Loading';
+import Loading from '../components/Loading';
 import BoottomNav from '../components/BottomNav';
 // import Notification from '../components/Notification';
 // import Room from '../components/rooms/Room'
@@ -9,8 +9,8 @@ import BoottomNav from '../components/BottomNav';
 const Home = () => {
 	return (
 		<>
-			{/* <Loading /> */}
 			{/* <Notification /> */}
+			<Loading />
 			<Login />
 			<NavBar />
 			<BoottomNav />

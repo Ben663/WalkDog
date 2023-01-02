@@ -28,7 +28,7 @@ const Main = ({ setSelectedLink, link }) => {
 		if (rooms.length === 0) getRooms(dispatch);
 		if (users.length === 0) getUsers(dispatch);
 		// eslint-disable-next-line
-	}, []);
+	}, [rooms.length, users.length, dispatch, link]);
 	return (
 		<Box
 			sx={{

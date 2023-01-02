@@ -19,9 +19,9 @@ const Users = ({ setSelectedLink, link }) => {
 	useEffect(() => {
 		setSelectedLink(link);
 		if (users.length === 0) getUsers(dispatch);
-		// eslint-disable-next-line
-	}, []);
-
+	}, [dispatch, link, users.length, setSelectedLink]);
+	// eslint-disable-next-line
+	
 	const columns = useMemo(
 		() => [
 			{

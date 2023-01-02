@@ -38,8 +38,8 @@ const ProgressItem = ({ file }) => {
 		};
 		setImageURL(URL.createObjectURL(file));
 		uploadImage();
-		// eslint-disable-next-line
-	}, [file]);
+	}, [file, currentUser?.id, dispatch, updatedRoom]);
+	// eslint-disable-next-line
 	return (
 		imageURL && (
 			<ImageListItem

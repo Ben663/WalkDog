@@ -25,8 +25,8 @@ const GeocoderInput = () => {
 		});
 
 		ctrl.on('clear', () => dispatch({ type: 'CLEAR_ADDRESS' }));
-		// eslint-disable-next-line
-	}, []);
+	}, [mapRef, containerRef, dispatch]);
+	// eslint-disable-next-line
 	return null;
 };
 

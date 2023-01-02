@@ -1,11 +1,67 @@
-.landing{
-    min-height: 100%;
-    width: 30%;
-    background: url('../../../../public/landPage/zou.jpg') center bottom/cover no-repeat;
+/** @format */
 
-
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.link{
-    display: flex;
-    justify-content: center;
+.landing-container {
+	min-height: 100%;
+	width: 100%;
+	background: url('../../../../public/landPage/pet.jpg') no-repeat center center
+		fixed;
+	background-size: 100% auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.link {
+	display: flex;
+	justify-content: center;
+}
+.landing-content {
+	background-color: #ddddddaa;
+	width: 50%;
+	height: 50%;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 4px 10px #eeeeee99;
+	border: 1px solid #999999aa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+h2 {
+	font-size: 3.2rem;
+	text-shadow: 0px 0px 12px #ffffff88;
+}
+
+.link {
+	text-decoration: none;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.link:active,
+link:visited {
+	color: white;
+}
+.link-btn {
+	background-color: dodgerblue;
+	padding: 0.8rem 1.6rem;
+	border-radius: 6px;
+	border: 2px solid rgb(4, 42, 80);
+	box-shadow: 0 3px 2px 1px #777777aa;
+	transition: all 0.2s ease-in-out;
+}
+
+.link-btn:hover {
+	background-color: rgb(26, 122, 218);
+	box-shadow: 0 5px 3px 1px #555555b9;
+	transform: translateY(-3px);
+	border: 2px solid rgb(84, 151, 218);
 }

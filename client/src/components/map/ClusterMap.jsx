@@ -61,8 +61,8 @@ const ClusterMap = () => {
 		if (mapRef.current) {
 			setBounds(mapRef.current.getMap().getBounds().toArray().flat());
 		}
-		// eslint-disable-next-line
-	}, [mapRef?.current]);
+	}, [mapRef]);
+	// eslint-disable-next-line
 	return (
 		<ReactMapGL
 			initialViewState={{ latitude: 51.5072, longitude: 0.1276 }}
