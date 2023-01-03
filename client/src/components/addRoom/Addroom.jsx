@@ -16,7 +16,7 @@ import AddLocation from './addLocation/AddLocation';
 import { clearRoom, createRoom, updateRoom } from '../../actions/room';
 import { useNavigate } from 'react-router-dom';
 
-const AddRoom = () => {
+function Addroom() {
 	const {
 		state: {
 			images,
@@ -153,7 +153,7 @@ const AddRoom = () => {
 						color='inherit'
 						disabled={!activeStep}
 						onClick={() => setActiveStep((activeStep) => activeStep - 1)}>
-						 Go Back
+						Go Back
 					</Button>
 					<Button
 						disabled={checkDisabled()}
@@ -183,6 +183,6 @@ const AddRoom = () => {
 			</Box>
 		</Container>
 	);
-};
+}
 
-export default AddRoom;
+export default Addroom;

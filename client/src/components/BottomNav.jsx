@@ -9,10 +9,11 @@ import {
 	SettingsAccessibility,
 	Map,
 } from '@mui/icons-material';
-import { useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 import ClusterMap from './map/ClusterMap';
 import Rooms from './rooms/Rooms';
-import AddRoom from './addRoom/AddRoom'
+// import AddRoom from './addRoom/AddRoom';
+import Addroom from './addRoom/Addroom';
 import Protected from './protected/Protected';
 import { useValue } from '../context/ContextProvider';
 
@@ -33,7 +34,7 @@ const BottomNav = () => {
 					1: <Rooms />,
 					2: (
 						<Protected>
-							<AddRoom />
+							<Addroom />
 						</Protected>
 					),
 				}[section]
