@@ -96,7 +96,7 @@ const UserMenu = ({ anchorUserMenu, setAnchorUserMenu }) => {
 						Profile
 					</MenuItem>
 				)}
-				<MenuItem onClick={() => navigate('dashboard')}>
+				<MenuItem onClick={() => navigate('/dashboard')}>
 					<ListItemIcon>
 						<Dashboard fontSize='small' />
 					</ListItemIcon>

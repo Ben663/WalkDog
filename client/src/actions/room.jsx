@@ -71,7 +71,7 @@ export const updateRoom = async (
 
 	const result = await fetchData(
 		{
-			url: `${url}/${updatedRoom._id}`,
+			url: `${url}/${updatedRoom?._id}`,
 			method: 'PATCH',
 			body: room,
 			token: currentUser?.token,

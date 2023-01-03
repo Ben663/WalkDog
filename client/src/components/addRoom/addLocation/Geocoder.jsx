@@ -16,6 +16,7 @@ const Geocoder = () => {
 		dispatch({
 			type: 'UPDATE_LOCATION',
 			payload: { lng: coords[0], lat: coords[1] },
+			placeName: e.result?.place_name,
 		});
 	});
 	return null;

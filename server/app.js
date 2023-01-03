@@ -21,7 +21,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(cors());
 const publicPath = path.join(__dirname, 'build');
 app.use(express.static(publicPath));
-app.use('/user', userRouter);
+app.use('/users', userRouter);
 app.use('/room', roomRouter);
 
 app.get('*', (req, res) => {
