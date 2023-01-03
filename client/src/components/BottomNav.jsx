@@ -1,3 +1,5 @@
+/** @format */
+
 import {
 	BottomNavigation,
 	BottomNavigationAction,
@@ -12,12 +14,11 @@ import {
 import { useEffect, useRef } from 'react';
 import ClusterMap from './map/ClusterMap';
 import Rooms from './rooms/Rooms';
-// import AddRoom from './addRoom/AddRoom';
-import Addroom from './addRoom/AddRoom';
+import AddRoom from './addRoom/AddRoom';
 import Protected from './protected/Protected';
 import { useValue } from '../context/ContextProvider';
 
-const BottomNav = () => {
+function BottomNav() {
 	const {
 		state: { section },
 		dispatch,
@@ -34,7 +35,7 @@ const BottomNav = () => {
 					1: <Rooms />,
 					2: (
 						<Protected>
-							<Addroom />
+							<AddRoom />
 						</Protected>
 					),
 				}[section]
@@ -64,6 +65,6 @@ const BottomNav = () => {
 			</Paper>
 		</Box>
 	);
-};
+}
 
 export default BottomNav;
