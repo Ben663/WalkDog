@@ -25,7 +25,7 @@ app.use('/user', userRouter);
 app.use('/room', roomRouter);
 
 app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, 'build', index.html));
+	res.sendFile(path.resolve(__dirname, 'build', "index.html"));
 });
 // app.get('/', (_, res) => res.json({ message: 'Welcome To Our API' }));
 app.use((_, res) => res.status(404).json({ success: false, message: 'Not Found' }));
