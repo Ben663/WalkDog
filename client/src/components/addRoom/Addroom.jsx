@@ -16,7 +16,7 @@ import AddLocation from './addLocation/AddLocation';
 import { clearRoom, createRoom, updateRoom } from '../../actions/room';
 import { useNavigate } from 'react-router-dom';
 
-const AddRoom = () => {
+function AddRoom() {
 	const {
 		state: {
 			images,
@@ -86,7 +86,8 @@ const AddRoom = () => {
 			if (!showSubmit) setShowSubmit(true);
 		} else {
 			if (showSubmit) setShowSubmit(false);
-		} // eslint-disable-next-line
+		}
+		// eslint-disable-next-line
 	}, [steps, showSubmit]);
 
 	const handleSubmit = () => {
@@ -182,6 +183,6 @@ const AddRoom = () => {
 			</Box>
 		</Container>
 	);
-};
+}
 
 export default AddRoom;

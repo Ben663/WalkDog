@@ -14,11 +14,12 @@ import {
 import { useEffect, useRef } from 'react';
 import ClusterMap from './map/ClusterMap';
 import Rooms from './rooms/Rooms';
-import AddRoom from './addRoom/AddRoom';
+import AddRoom from './addRoom/Addroom';
 import Protected from './protected/Protected';
 import { useValue } from '../context/ContextProvider';
 
 function BottomNav() {
+
 	const {
 		state: { section },
 		dispatch,
