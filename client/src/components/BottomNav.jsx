@@ -12,7 +12,6 @@ import {
 import { useEffect, useRef} from 'react';
 import ClusterMap from './map/ClusterMap';
 import Rooms from './rooms/Rooms';
-// import AddRoom from './addRoom/AddRoom';
 import AddRoom from './addRoom/AddRoom'
 import Protected from './protected/Protected';
 import { useValue } from '../context/ContextProvider';
