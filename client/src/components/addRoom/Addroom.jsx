@@ -60,21 +60,21 @@ const AddRoom = () => {
 		} else {
 			if (steps[2].completed) setComplete(2, false);
 		}
-	}, [images]);
+	}, [images, steps]);
 	useEffect(() => {
 		if (details.title.length > 4 && details.description.length > 9) {
 			if (!steps[1].completed) setComplete(1, true);
 		} else {
 			if (steps[1].completed) setComplete(1, false);
 		}
-	}, [details]);
+	}, [details, steps]);
 	useEffect(() => {
 		if (location.lng || location.lat) {
 			if (!steps[0].completed) setComplete(0, true);
 		} else {
 			if (steps[0].completed) setComplete(0, false);
 		}
-	}, [location]);
+	}, [location, steps]);
 	const setComplete = (index, status) => {
 		setSteps((steps) => {
 			steps[index].completed = status;
@@ -88,7 +88,7 @@ const AddRoom = () => {
 			if (showSubmit) setShowSubmit(false);
 		}
 		// eslint-disable-next-line
-	}, [steps]);
+	}, [steps, showSubmit]);
 
 	const handleSubmit = () => {
 		const room = {
@@ -153,12 +153,12 @@ const AddRoom = () => {
 						color='inherit'
 						disabled={!activeStep}
 						onClick={() => setActiveStep((activeStep) => activeStep - 1)}>
-						Back
+						 Go Back
 					</Button>
 					<Button
 						disabled={checkDisabled()}
 						onClick={handleNext}>
-						Next
+						Go Next
 					</Button>
 				</Stack>
 
