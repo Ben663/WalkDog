@@ -1,3 +1,5 @@
+/** @format */
+
 import { Box } from '@mui/material';
 import ReactMapGL, {
 	GeolocateControl,
@@ -8,6 +10,11 @@ import { useValue } from '../../../context/ContextProvider';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useEffect, useRef } from 'react';
 import Geocoder from './Geocoder';
+import mapboxgl from 'mapbox-gl';
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass =
+	require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 const AddLocation = () => {
 	const {
