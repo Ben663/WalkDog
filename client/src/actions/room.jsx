@@ -1,7 +1,11 @@
 import deleteImages from './utils/deleteImages';
 import fetchData from './utils/fetchData';
 
-const url = process.env.REACT_APP_SERVER_URL + '/room';
+let url = process.env.REACT_APP_SERVER_URL + '/room';
+if (process.env.NODE_ENV === 'production') {
+	url='/room'
+}
+ 
 
 export const createRoom = async (room, currentUser, dispatch) => {
 	dispatch({ type: 'START_LOADING' });
