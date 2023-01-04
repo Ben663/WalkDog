@@ -33,7 +33,7 @@ export const createRoom = async (room, currentUser, dispatch) => {
 
 export const getRooms = async (dispatch) => {
 	dispatch({ type: 'START_LOADING' });
-	const result = await fetchData({ url, method: 'GET' }, dispatch);
+	const result = await fetchData({ url, method: 'POST' }, dispatch);
 	if (result) {
 		dispatch({ type: 'UPDATE_ROOMS', payload: result });
 	}
