@@ -11,12 +11,13 @@ const __dirname = url.fileURLToPath(new URL('./', import.meta.url));
 const port = process.env.PORT || 5000;
 const app = express();
 
-app.use((_, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL);
-    res.hasHeader('Access-Control-Allow-Methods', 'Get,POST,PUT,PATCH,DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Authorization');
-    next();
-});
+// app.use((_, res, next) => {
+// 	res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL);
+// 	console.log(process.env.CLIENT_URL);
+//     res.hasHeader('Access-Control-Allow-Methods', 'Get,POST,PUT,PATCH,DELETE');
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Authorization');
+//     next();
+// });
 app.use(express.json({ limit: '10mb' }));
 app.use(cors());
 const publicPath = path.join(__dirname, 'build');
