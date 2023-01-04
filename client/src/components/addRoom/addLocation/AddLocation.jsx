@@ -14,7 +14,7 @@ import mapboxgl from 'mapbox-gl';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass =
-	require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+	require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default; /* eslint import/no-webpack-loader-syntax: off*/
 
 const AddLocation = () => {
 	const {
