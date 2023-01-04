@@ -9,7 +9,7 @@ import React from 'react';
 import { useValue } from '../../../context/ContextProvider';
 import deleteFile from '../../../firebase/deleteFile';
 
-const ImagesList = () => {
+function ImagesList () {
 	const {
 		state: { images, currentUser, updatedRoom },
 		dispatch,

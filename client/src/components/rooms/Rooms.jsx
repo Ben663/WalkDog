@@ -11,7 +11,7 @@ import {
 import { useValue } from '../../context/ContextProvider';
 import { StarBorder } from '@mui/icons-material';
 
-const Rooms = () => {
+function Rooms () {
 	const {
 		state: { filteredRooms },
 		dispatch,

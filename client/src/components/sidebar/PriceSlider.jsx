@@ -8,7 +8,7 @@ const marks = [
 	{ value: 50, label: '$50' },
 ];
 
-const PriceSlider = () => {
+function PriceSlider () {
 	const {
 		state: { priceFilter },
 		dispatch,

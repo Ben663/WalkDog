@@ -7,7 +7,7 @@ const ctrl = new MapboxGeocoder({
 	accessToken: process.env.REACT_APP_MAP_TOKEN,
 });
 
-const GeocoderInput = () => {
+function GeocoderInput ()  {
 	const { mapRef, containerRef, dispatch } = useValue();
 
 	useEffect(() => {

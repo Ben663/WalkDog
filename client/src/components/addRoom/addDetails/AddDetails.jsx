@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { useValue } from '../../../context/ContextProvider';
 import InfoField from './InfoField';
 
-const AddDetails = () => {
+function AddDetails () {
 	const {
 		state: {
 			details: { title, description, price },

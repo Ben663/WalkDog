@@ -4,7 +4,7 @@ import { useDropzone } from 'react-dropzone';
 import ImagesList from './ImagesList';
 import ProgressList from './progressList/ProgressList';
 
-const AddImages = () => {
+function AddImages () {
 	const [files, setFiles] = useState([]);
 	const onDrop = useCallback((acceptedFiles) => {
 		setFiles(acceptedFiles);

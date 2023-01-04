@@ -35,7 +35,7 @@ const Transition = forwardRef((props, ref) => {
 	);
 });
 
-const Room = () => {
+function Room () {
 	const {
 		state: { room },
 		dispatch,

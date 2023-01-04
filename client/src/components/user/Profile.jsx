@@ -14,7 +14,7 @@ import { useValue } from '../../context/ContextProvider';
 import { useRef } from 'react';
 import { updateProfile } from '../../actions/user';
 
-const Profile = () => {
+function Profile () {
 	const {
 		state: { profile, currentUser },
 		dispatch,

@@ -7,13 +7,17 @@ import './cluster.css';
 import { Avatar, Paper, Tooltip } from '@mui/material';
 import GeocoderInput from '../sidebar/GeocoderInput';
 import PopupRoom from './PopupRoom';
+import mapboxgl from 'mapbox-gl';
+
 
 const supercluster = new Supercluster({
 	radius: 75,
 	maxZoom: 20,
 });
-
-const ClusterMap = () => {
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass =
+	require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default; /* eslint import/no-webpack-loader-syntax: off*/
+function ClusterMap()  {
 	const {
 		state: { filteredRooms },
 		dispatch,

@@ -20,15 +20,15 @@ import AreaRoomsUsers from './AreaRoomsUsers';
 
 const Main = ({ setSelectedLink, link }) => {
 	const {
-		state: { rooms, users },
+		state: { rooms, users, currentUser },
 		dispatch,
 	} = useValue();
 	useEffect(() => {
 		setSelectedLink(link);
 		if (rooms.length === 0) getRooms(dispatch);
-		if (users.length === 0) getUsers(dispatch);
+		if (users.length === 0) getUsers(dispatch, currentUser);
 		// eslint-disable-next-line
-	}, [rooms.length, users.length, dispatch, link]);
+	}, []);
 	return (
 		<Box
 			sx={{

@@ -5,7 +5,7 @@ import { useValue } from '../../context/ContextProvider';
 import useCheckToken from '../../hooks/useCheckToken';
 import UserMenu from './UserMenu';
 
-const UserIcons = () => {
+function UserIcons ()  {
 	useCheckToken();
 	const {
 		state: { currentUser },

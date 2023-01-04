@@ -3,7 +3,7 @@ import { Alert, AlertTitle, Button, Container } from '@mui/material';
 import React from 'react';
 import { useValue } from '../../context/ContextProvider';
 
-const AccessMessage = () => {
+function AccessMessage () {
 	const { dispatch } = useValue();
 	return (
 		<Container sx={{ py: 10 }}>

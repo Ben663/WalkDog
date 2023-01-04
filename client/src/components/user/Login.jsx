@@ -15,7 +15,7 @@ import { useValue } from '../../context/ContextProvider';
 import GoogleOneTapLogin from './GoogleOneTabLogin'
 import PasswordField from './PasswordField';
 
-const Login = () => {
+function Login ()  {
 	const {
 		state: { openLogin },
 		dispatch,

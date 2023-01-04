@@ -3,7 +3,7 @@ import { useControl } from 'react-map-gl';
 import { useValue } from '../../../context/ContextProvider';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 
-const Geocoder = () => {
+function Geocoder () {
 	const { dispatch } = useValue();
 	const ctrl = new MapBoxGeocoder({
 		accessToken: process.env.REACT_APP_MAP_TOKEN,

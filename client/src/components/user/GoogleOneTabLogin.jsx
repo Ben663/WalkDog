@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useValue } from '../../context/ContextProvider';
 import jwtDecode from 'jwt-decode';
 
-const GoogleOneTapLogin = () => {
+function GoogleOneTapLogin () {
 	const { dispatch } = useValue();
 	const [disabled, setDisabled] = useState(false);
 
