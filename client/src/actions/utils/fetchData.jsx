@@ -20,7 +20,7 @@ const fetchData = async (
 			type: 'UPDATE_ALERT',
 			payload: { open: true, severity: 'error', message: error.message },
 		});
-		console.log(error);
+		// console.log(error);
 		return null;
 	}
 };
